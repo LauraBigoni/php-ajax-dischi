@@ -51,8 +51,10 @@ if (!empty($search)) {
     $results = [];
     foreach ($database as $album) {
         $title = strtolower($album['title']);
+        $genre = strtolower($album['genre']);
         $search = trim(strtolower($search));
         if (strpos($title, $search) !== false) $results[] = $album;
+        if (strpos($genre, $search) !== false) $results[] = $album;
     }
 }
 
