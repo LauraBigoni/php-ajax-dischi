@@ -36,8 +36,8 @@
                     <div class="col-12 text-center">
                         <h1>MY ALBUMS:</h1>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search something.." v-model="search">
-                            <button class="btn btn-outline-light" type="button" id="button-addon2">Search</button>
+                            <input type="text" class="form-control" placeholder="Search something.." v-model.trim="search" @keyup.enter="searchApi">
+                            <button class="btn btn-outline-light" type="button" id="button-addon2" @click="searchApi">Search</button>
                         </div>
                     </div>
                     <div class="col d-flex flex-wrap justify-content-around align-items-start">
