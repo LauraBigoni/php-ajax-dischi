@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+body {
+	background-image: linear-gradient(to right,
+			#e9596c,
+			#ed6a68,
+			#f07c67,
+			#f18c68,
+			#f19c6c,
+			#f6a178,
+			#fba784,
+			#ffad90,
+			#ffada6,
+			#ffb0be,
+			#ffb6d5,
+			#ffbeeb);
+	color: white;
+	font-family: "Lato", sans-serif;
+}
+
+header {
+	border-bottom: 2px solid white;
+}
+
+footer {
+	border-top: 2px solid white;
+}
+
+.fa-spotify {
+	font-size: 60px;
+	padding: 10px 10px;
+	color: white;
+}
+
+.albums ul {
+	padding-top: 30px;
+}
+
+.albums h5 {
+	height: 20px;
+	padding-bottom: 40px;
+}
+
+.albums li {
+	width: 220px;
+	height: 320px;
+	padding: 20px 0;
+	margin-bottom: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.albums img {
+	width: 150px;
+	height: auto;
+}
+
+.albums p {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.page-link {
+	color: #e9596c;
+}
+
+.page-link:hover, .page-link:focus {
+	color: #e9596c;
+	box-shadow: 0 0 0 0.15rem #e9596c;
+}
