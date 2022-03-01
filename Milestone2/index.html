@@ -36,12 +36,14 @@
                     <div class="col-12 text-center">
                         <h1>MY ALBUMS:</h1>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search something.." v-model.trim="search" @keyup.enter="searchApi">
-                            <button class="btn btn-outline-light" type="button" id="button-addon2" @click="searchApi">Search</button>
+                            <input type="text" class="form-control" placeholder="Search something.."
+                                v-model.trim="search" @keyup.enter="searchApi">
+                            <button class="btn btn-outline-light" type="button" id="button-addon2"
+                                @click="searchApi">Search</button>
                         </div>
                     </div>
-                    <div class="col d-flex flex-wrap justify-content-around align-items-start">
-                        <ul v-if="albums.length" v-for="album in albums" :key="album.title" class="list-unstyled">
+                    <div v-if="albums.length" class="col d-flex flex-wrap justify-content-around align-items-start">
+                        <ul v-for="album in albums" :key="album.title" class="list-unstyled">
                             <li class="d-flex flex-column justify-content-center align-items-center">
                                 <img :src="album.poster" :alt="album.title">
                                 <h5 class="text-center">{{album.title}}</h5>
@@ -49,8 +51,8 @@
                                 <p>{{album.year}}</p>
                             </li>
                         </ul>
-                        <p v-else>Nessun disco</p>
                     </div>
+                    <p class="text-center" v-else>Nessun disco</p>
                 </div>
             </div>
         </main>

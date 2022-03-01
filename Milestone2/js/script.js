@@ -9,7 +9,6 @@ const app = new Vue({
     },
     methods: {
         searchApi() {
-            if (!this.search) return;
             axios.get(`http://localhost/esercizi_php/php-ajax-dischi/api/albums?search=${this.search}`).then(res => {
                 this.albums = res.data;
             }).catch(err => { console.error(err) })
