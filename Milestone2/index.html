@@ -37,13 +37,12 @@
                         <h1>MY ALBUMS:</h1>
                     </div>
                     <div class="col d-flex flex-wrap justify-content-around align-items-start">
-
-                        <ul v-if="albums.length" class="list-unstyled">
+                        <ul v-if="albums.length" v-for="album in albums" :key="album.title" class="list-unstyled">
                             <li class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="" alt="">
-                                <h5 class="text-center"></h5>
-                                <p></p>
-                                <p></p>
+                                <img :src="album.poster" :alt="album.title">
+                                <h5 class="text-center">{{album.title}}</h5>
+                                <p>{{album.author}}</p>
+                                <p>{{album.year}}</p>
                             </li>
                         </ul>
                         <p v-else>Nessun disco</p>
