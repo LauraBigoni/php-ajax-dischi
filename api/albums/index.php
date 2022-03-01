@@ -1,4 +1,5 @@
 <?php
+$search = $_GET['search'] ?? '';
 
 $database = [
     [
@@ -44,7 +45,17 @@ $database = [
         'genre' => 'Rock'
     ]
 ];
+$results = $database;
+
+if (!empty($search)) {
+    $results = [];
+    foreach ($database as $album) {
+        $title = strtolower($album['title']);
+        $search = trim(strtolower($search));
+        if (strpos($title, $search) !== false) $results[] = $album;
+    }
+}
 
 header('Content-Type: application/json');
 
-echo json_encode($database);
+echo json_encode($results);
