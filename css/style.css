@@ -22,10 +22,6 @@ header {
 	border-bottom: 2px solid white;
 }
 
-footer {
-	border-top: 2px solid white;
-}
-
 .fa-spotify {
 	font-size: 60px;
 	padding: 10px 10px;
@@ -57,13 +53,4 @@ footer {
 .albums p {
 	text-transform: uppercase;
 	font-weight: 700;
-}
-
-.page-link {
-	color: #e9596c;
-}
-
-.page-link:hover, .page-link:focus {
-	color: #e9596c;
-	box-shadow: 0 0 0 0.15rem #e9596c;
 }
